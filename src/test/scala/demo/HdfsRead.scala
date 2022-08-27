@@ -42,13 +42,15 @@ object HdfsRead {
      val df2 = df.select("studentid","name","marks","dept","subject").where("marks > 80")
 
     val query = df1.writeStream.format("console").trigger(Trigger.ProcessingTime(50.seconds)).start()
-    val query1 = df2.writeStream
+    val query1 = df2.writeStream.format("console").trigger(Trigger.ProcessingTime(50.seconds)).start()
+
+    /* val query1 = df2.writeStream
       .format("console")
       .format("csv")
       .option("path","C:/Users/yogesh.ahire/Desktop/Study/dataWrite")
       .option("checkpointLocation", "C:/Users/yogesh.ahire/Desktop/Study/dataWrite")
       .start()
-
+*/
      query.awaitTermination()
      query1.awaitTermination()
 

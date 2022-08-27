@@ -58,9 +58,11 @@ object StreamingBiggerFIles {
                   //.outputMode("Append")
                   .format("parquet")
                   .trigger(Trigger.ProcessingTime(25.seconds))
-                  .option("path","C:/Users/yogesh.ahire/Desktop/Study/dataWrite1/destination1")
-                  .option("checkpointLocation", "C:/Users/yogesh.ahire/Desktop/Study/dataWrite1/checkpointing1")
-                  .start()
+                  //.option("path","C:/Users/yogesh.ahire/Desktop/Study/dataWrite1/destination1")
+                  //.option("checkpointLocation", "C:/Users/yogesh.ahire/Desktop/Study/dataWrite1/checkpointing1")
+                  .option("path","C:\\Users\\yogesh.ahire\\Desktop\\Study\\data\\dest")
+                  .option("checkpointLocation", "C:\\Users\\yogesh.ahire\\Desktop\\Study\\data\\checkpointing1")
+                 .start()
 
     query.awaitTermination()
 

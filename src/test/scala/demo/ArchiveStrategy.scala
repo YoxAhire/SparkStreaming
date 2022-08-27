@@ -13,7 +13,9 @@ object ArchiveStrategy extends App {
     .config("spark.sql.shuffle.partition",2)
     .getOrCreate()
 
-  val dataDir = "C:\\practice\\data"
+  spark.sparkContext.setLogLevel("ERROR")
+
+  val dataDir = "C:\\practice\\dataA"
   val archiveDir = "C:\\practice\\archive"
   FileUtils.deleteDirectory(new File(dataDir))
   new Thread(new FileGenerator(dataDir)).start()
@@ -24,6 +26,7 @@ object ArchiveStrategy extends App {
     .text(dataDir)
     .writeStream
     .format("console")
+    .option("checkpointLocation", "C:\\Users\\yogesh.ahire\\Desktop\\Study\\data\\checkpointing1")
     .option("truncate",false)
 
   writeQuery.start().awaitTermination()
