@@ -1,0 +1,13 @@
+orgid,orgname,domain,service,headquarter
+100,"STL","Networking","product base","Ahemdabad"
+200,"TCS","IT banking","service base","mumbai"
+300,"Wipro","CE","service base","pune"
+400,"Google","IT","product base","pune"
+500,"Amazon","IT","product base","mumbai"
+600,"corecard","healthcare","product base","bhopal"
+700,"KPMG","DBMS","service base","mumbai"
+800,"Hexaware","IT","service base","pune"
+900,"BalckStraw","CE","service base","mumbai"
+1000,"HSBC","IT","product base","pune"
+1100,"Tech Mahindra","banking","product base","mumbai"
+1200,"FSS","Banking","product base","pune"
