@@ -1,0 +1,4 @@
+order_id,order_date,order_customer_id,order_status,amount
+57012,2020-03-02 11:55:00,2765,"PROCESSING",200
+45256,2020-03-02 11:52:00,791,"COMPLETE",300
+
